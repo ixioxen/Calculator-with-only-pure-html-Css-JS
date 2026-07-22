@@ -119,3 +119,12 @@ body {
     text-align: left;
     padding-left: 24px;
 }
+
+/* Carpet Mode */
+/* #carpetCalculator{
+    display: none;
+} */
+
+.hidden{
+    display: none;
+}

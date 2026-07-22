@@ -109,7 +109,7 @@ operators.forEach(function (btn) {
         render();
     });
 });
-
+  
 // --- AC button: clear everything ---
 clearBtn.addEventListener('click', function () {
     currentNumber = '';

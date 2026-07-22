@@ -10,41 +10,47 @@
     <div class="mainContainer">
         <div class="calculator">
             <div class="modeContainer">
-                <button><a href="">Measuring Mode</a></button>
-                <button id="theme">Dark Mode</button>
+                <button id="normalModeBtn">Normal Mode</button>
+                <button id="carpetModeBtn">Carpet Mode</button>
             </div>
-            <div class="display">
-                <div class="display__current" id="resultDisplay"></div>
-                <div class="display__current" id="display"></div>
+            <div id="normalCalculator">
+                <div class="display">
+                    <div class="display__current" id="resultDisplay"></div>
+                    <div class="display__current" id="display"></div>
+                </div>
+
+                <div class="buttonContainer">
+                    <button class="btn btn--gray" id="clear">AC</button>
+                    <button class="btn btn--gray" id="del">Del</button>
+                    <button class="btn btn--gray operator ">%</button>
+                    <button class="btn btn--accent operator">÷</button>
+                    <button class="btn number">7</button>
+                    <button class="btn number">8</button>
+                    <button class="btn number">9</button>
+                    <button class="btn btn--accent operator">×</button>
+
+                    <button class="btn number">4</button>
+                    <button class="btn number">5</button>
+                    <button class="btn number">6</button>
+                    <button class="btn btn--accent operator">-</button>
+
+                    <button class="btn number">1</button>
+                    <button class="btn number">2</button>
+                    <button class="btn number">3</button>
+                    <button class="btn btn--accent operator">+</button>
+
+                    <button class="btn number btn--wide">0</button>
+                    <button class="btn operator">.</button>
+                    <button class="btn btn--accent" id="calculate">=</button>
+                </div>
             </div>
-
-            <div class="buttonContainer">
-                <button class="btn btn--gray" id="clear">AC</button>
-                <button class="btn btn--gray" id="del">Del</button>
-                <button class="btn btn--gray operator ">%</button>
-                <button class="btn btn--accent operator">÷</button>
-                <button class="btn number">7</button>
-                <button class="btn number">8</button>
-                <button class="btn number">9</button>
-                <button class="btn btn--accent operator">×</button>
-
-                <button class="btn number">4</button>
-                <button class="btn number">5</button>
-                <button class="btn number">6</button>
-                <button class="btn btn--accent operator">-</button>
-
-                <button class="btn number">1</button>
-                <button class="btn number">2</button>
-                <button class="btn number">3</button>
-                <button class="btn btn--accent operator">+</button>
-
-                <button class="btn number btn--wide">0</button>
-                <button class="btn operator">.</button>
-                <button class="btn btn--accent" id="calculate">=</button>
+            <div id="carpetCalculator">
+                <div>hello world</div>
             </div>
         </div>
     </div>
-
+    <script src="switchMode.js"></script>
     <script src="index.js"></script>
+    <script src="carpet.js"></script>
 </body>
 </html>
