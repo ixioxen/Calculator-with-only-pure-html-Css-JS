@@ -61,7 +61,7 @@ body {
     
 }
 .carpetDisplay{
-    min-height: 170px;
+    min-height: 230px;
 }
 
 /* .display__previous {
@@ -70,10 +70,8 @@ body {
 } */
 
 .display__current {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #ffffff;
-    /* overflow-x : auto; */
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .buttonContainer {
@@ -129,4 +127,9 @@ body {
 /* switching mode */
 .hidden{
     display: none;
+}
+
+.amount{
+    color: red;
+    font-size: 20px;
 }

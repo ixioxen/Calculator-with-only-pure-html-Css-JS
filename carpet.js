@@ -3,6 +3,9 @@ let yardPrice = '';
 let inchPrice = '';
 let showPlus = false;
 let pieces = [];
+let amountText = '';
+let quanityText = '';
+let yardText = '';
 
 const cNums = document.querySelectorAll('.carpetNumber');
 const cClear = document.querySelector('#carpetClear');
@@ -41,6 +44,12 @@ function renderCarpet(){
     }else{
         expression.style.fontSize = '20px';
     }
+
+    // amount display
+    totalAmount.innerHTML  = amountText;
+    totoalQuanity.innerHTML = quanityText;
+    totalYard.innerHTML = yardText;
+    
 }
 renderCarpet();
 
@@ -82,10 +91,7 @@ cDel.addEventListener('click',function(){
     }else if(pieces.length > 0){
         currentInput = pieces.pop();
         showPlus = false;  
-    }
-    console.log(currentInput);
-    console.log(pieces)
-    
+    }    
     renderCarpet()
 });
 
@@ -93,6 +99,9 @@ cDel.addEventListener('click',function(){
 cClear.addEventListener('click',function(){
     pieces = [];
     currentInput = '';
+    amountText = '';
+    quanityText = '';
+    yardText = '';
     renderCarpet();
 })
 
@@ -118,12 +127,35 @@ function carpetCalculation(){
 };
 
 // 3600 button
-// cOperators.forEach(cOperator => {
-//     cOperator.addEventListener('click',function(event){
-//         if(event.target.textContent == 3600 ){
-            
+cOperators.forEach(cOperator => {
+    cOperator.addEventListener('click',function(event){
+        let totalResult = carpetCalculation();
 
+        if(event.target.textContent == '3600' ){
 
-//         }
-//     })
-// })
+            quanityText = 'Total pieces: <span class = "amount">' + pieces.length +'</span>';
+            yardText = 'Total yards: <span class = "amount">' + totalResult.totalYard +'.'+totalResult.totalInch + '</span>';
+            if(totalResult.totalYard >= 10){
+                result_3600 = (totalResult.totalYard * 3500) + (totalResult.totalInch * 100);
+                amountText =
+                    'Total amount: <span class = "amount"> ' + result_3600 + '</span> kyats';
+                
+            }else{
+                result_3600 = (totalResult.totalYard * 3600) + (totalResult.totalInch * 100);
+                amountText = 
+                    'Total amount: <span class = "amount"> ' + result_3600 + '</span> kyats';
+            }
+            renderCarpet();
+        }else if(event.target.textContent == '2800'){
+            result_2800 = (totalResult.totalYard * 2800) + (totalResult.totalInch * 77);
+            amountText = 
+                'Total amount: <span class = "amount"> ' + result_2800 + '</span> kyats';
+            renderCarpet();
+        }else{
+            result_800 = (totalResult.totalYard * 800) + (totalResult.totalInch * 22);
+            amountText = 
+                'Total amount: <span class = "amount"> ' + result_800 + '</span> kyats';
+                renderCarpet();
+        };
+    });
+});
