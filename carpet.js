@@ -135,17 +135,19 @@ cOperators.forEach(cOperator => {
 
             quanityText = 'Total pieces: <span class = "amount">' + pieces.length +'</span>';
             yardText = 'Total yards: <span class = "amount">' + totalResult.totalYard +'.'+totalResult.totalInch + '</span>';
+
+            result_3600 = (totalResult.totalYard * 3600) + (totalResult.totalInch * 100);
+    
             if(totalResult.totalYard >= 10){
-                result_3600 = (totalResult.totalYard * 3500) + (totalResult.totalInch * 100);
+
+                result_3500 = (totalResult.totalYard * 3500) + (totalResult.totalInch * 100);
                 amountText =
-                    'Total amount: <span class = "amount"> ' + result_3600 + '</span> kyats';
-                
-            }else{
-                result_3600 = (totalResult.totalYard * 3600) + (totalResult.totalInch * 100);
-                amountText = 
-                    'Total amount: <span class = "amount"> ' + result_3600 + '</span> kyats';
-            }
+                    'Total amount: <span class = "amount"> ' + result_3600 + '</span> kyats' + '<br> Total free amount: <span class = "amount"> ' + result_3500 + '</span> kyats';
             renderCarpet();
+            }else{
+                amountText = 'Total amount: <span class = "amount"> ' + result_3600 + '</span> kyats';
+                renderCarpet();
+            }
         }else if(event.target.textContent == '2800'){
             result_2800 = (totalResult.totalYard * 2800) + (totalResult.totalInch * 77);
             amountText = 
