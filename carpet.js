@@ -131,27 +131,27 @@ cOperators.forEach(cOperator => {
     cOperator.addEventListener('click',function(event){
         let totalResult = carpetCalculation();
 
-        if(event.target.textContent == '3600' ){
+        if(event.target.textContent == '3700' ){
 
             quanityText = 'Total pieces: <span class = "amount">' + pieces.length +'</span>';
             yardText = 'Total yards: <span class = "amount">' + totalResult.totalYard +'.'+totalResult.totalInch + '</span>';
 
-            result_3600 = (totalResult.totalYard * 3600) + (totalResult.totalInch * 100);
+            result_3700 = (totalResult.totalYard * 3700) + (totalResult.totalInch * 100);
     
             if(totalResult.totalYard >= 10){
 
-                result_3500 = (totalResult.totalYard * 3500) + (totalResult.totalInch * 100);
+                result_3600 = (totalResult.totalYard * 3600) + (totalResult.totalInch * 100);
                 amountText =
-                    'Total amount: <span class = "amount"> ' + result_3600 + '</span> kyats' + '<br> Total free amount: <span class = "amount"> ' + result_3500 + '</span> kyats';
+                    'Total Free amount: <span class = "amount"> ' + result_3600 + '</span> kyats' + '<br> Total free amount: <span class = "amount"> ' + result_3500 + '</span> kyats';
             renderCarpet();
             }else{
-                amountText = 'Total amount: <span class = "amount"> ' + result_3600 + '</span> kyats';
+                amountText = 'Total amount: <span class = "amount"> ' + result_3700 + '</span> kyats';
                 renderCarpet();
             }
-        }else if(event.target.textContent == '2800'){
-            result_2800 = (totalResult.totalYard * 2800) + (totalResult.totalInch * 77);
+        }else if(event.target.textContent == '2900'){
+            result_2900 = (totalResult.totalYard * 2900) + (totalResult.totalInch * 77);
             amountText = 
-                'Total amount: <span class = "amount"> ' + result_2800 + '</span> kyats';
+                'Total amount: <span class = "amount"> ' + result_2900 + '</span> kyats';
             renderCarpet();
         }else{
             result_800 = (totalResult.totalYard * 800) + (totalResult.totalInch * 22);
