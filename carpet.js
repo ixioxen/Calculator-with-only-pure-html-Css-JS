@@ -142,7 +142,7 @@ cOperators.forEach(cOperator => {
 
                 result_3600 = (totalResult.totalYard * 3600) + (totalResult.totalInch * 100);
                 amountText =
-                    'Total Free amount: <span class = "amount"> ' + result_3600 + '</span> kyats' + '<br> Total free amount: <span class = "amount"> ' + result_3500 + '</span> kyats';
+                    'Total amount: <span class = "amount"> ' + result_3700 + '</span> kyats' + '<br> Total free amount: <span class = "amount"> ' + result_3600 + '</span> kyats';
             renderCarpet();
             }else{
                 amountText = 'Total amount: <span class = "amount"> ' + result_3700 + '</span> kyats';
